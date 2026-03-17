@@ -314,7 +314,7 @@ function App() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <Droplets className="w-6 h-6 text-amber" />
-              <span className="text-white font-heading font-bold text-lg lg:text-xl">{{BUSINESS_SHORT_NAME}}</span>
+              <span className="text-white font-heading font-bold text-lg lg:text-xl">PLACEHOLDER_SHORT_NAME</span>
             </div>
 
             {/* Desktop Nav */}
@@ -740,7 +740,7 @@ function App() {
           <div className="plumbing-image relative w-full lg:w-[48vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/plumbing-wrench.jpg" 
-              alt="{{EMERGENCY_IMAGE_ALT}}"
+              alt="Emergency plumber"
               className="w-full h-full object-cover"
             />
           </div>
@@ -1054,7 +1054,7 @@ function App() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <Droplets className="w-6 h-6 text-amber" />
-                <span className="text-white font-heading font-bold text-lg">{{BUSINESS_SHORT_NAME}}</span>
+                <span className="text-white font-heading font-bold text-lg">PLACEHOLDER_SHORT_NAME</span>
               </div>
               <p className="text-white/60 text-sm mb-6">
                 Fast, reliable plumbing & heating in PLACEHOLDER_AREA & PLACEHOLDER_POSTCODE. Gas Safe registered engineers.
