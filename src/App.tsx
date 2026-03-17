@@ -24,13 +24,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 gsap.registerPlugin(ScrollTrigger);
 
+// BUSINESS INFO - Replace these values when creating a new site
 const BUSINESS_INFO = {
-  name: "{{BUSINESS_NAME}}",
-  phone: "{{PHONE}}",
-  whatsapp: "{{WHATSAPP}}",
-  address: "{{FULL_ADDRESS}}",
-  postcode: "{{POSTCODE}}",
-  areas: {{AREAS_ARRAY}}
+  name: "PLACEHOLDER_BUSINESS_NAME",
+  shortName: "PLACEHOLDER_SHORT_NAME",
+  phone: "PLACEHOLDER_PHONE",
+  whatsapp: "PLACEHOLDER_WHATSAPP",
+  email: "PLACEHOLDER_EMAIL",
+  address: "PLACEHOLDER_FULL_ADDRESS",
+  streetAddress: "PLACEHOLDER_STREET",
+  postcode: "PLACEHOLDER_POSTCODE",
+  area: "PLACEHOLDER_AREA",
+  region: "PLACEHOLDER_REGION",
+  country: "PLACEHOLDER_COUNTRY",
+  geoLat: "PLACEHOLDER_LAT",
+  geoLng: "PLACEHOLDER_LNG",
+  gasSafeNumber: "PLACEHOLDER_GAS_SAFE",
+  areas: ["Area1", "Area2", "Area3", "Area4", "Area5"]
 };
 
 function App() {
@@ -368,7 +378,7 @@ function App() {
         <div className="hero-image absolute left-0 top-0 w-full lg:w-[62vw] h-[50vh] lg:h-full">
           <img 
             src="/images/hero-plumber.jpg" 
-            alt="Professional plumber in {{AREA}} {{POSTCODE}}"
+            alt="Professional plumber in PLACEHOLDER_AREA PLACEHOLDER_POSTCODE"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-navy/90 lg:to-navy" />
@@ -387,7 +397,7 @@ function App() {
             </h1>
             
             <p className="hero-subtext text-white/80 text-base lg:text-lg mb-6 lg:mb-8 max-w-md">
-              Same-day service in {{AREA}}, {{POSTCODE}} & surrounding areas. Gas Safe registered engineers.
+              Same-day service in PLACEHOLDER_AREA, PLACEHOLDER_POSTCODE & surrounding areas. Gas Safe registered engineers.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
@@ -539,7 +549,7 @@ function App() {
           <div className="help-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/engineer-van.jpg" 
-              alt="Local plumber at work in {{AREA}}"
+              alt="Local plumber at work in PLACEHOLDER_AREA"
               className="w-full h-full object-cover"
             />
           </div>
@@ -553,7 +563,7 @@ function App() {
               </h2>
               <p className="text-text-secondary text-base lg:text-lg mb-6">
                 We're local engineers who turn up on time, explain the work, and leave your home tidy. 
-                Based in {{AREA}} {{POSTCODE}}, we serve all of {{REGION}} with pride.
+                Based in PLACEHOLDER_AREA PLACEHOLDER_POSTCODE, we serve all of PLACEHOLDER_REGION with pride.
               </p>
               <p className="text-text-secondary text-base lg:text-lg mb-8">
                 With years of experience and hundreds of satisfied customers, we've built our reputation 
@@ -596,7 +606,7 @@ function App() {
                 </div>
                 <p className="text-white/70 text-base lg:text-lg max-w-xl">
                   If it's urgent, we'll prioritise getting to you—fast, tidy, and professional. 
-                  Same-day emergency service available across {{AREA}} and {{REGION}}.
+                  Same-day emergency service available across PLACEHOLDER_AREA and PLACEHOLDER_REGION.
                 </p>
               </div>
               <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary whitespace-nowrap">
@@ -632,7 +642,7 @@ function App() {
           <div className="reliable-image relative w-full lg:w-[48vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/under-sink.jpg" 
-              alt="Quality plumbing work in {{REGION}}"
+              alt="Quality plumbing work in PLACEHOLDER_REGION"
               className="w-full h-full object-cover"
             />
           </div>
@@ -678,7 +688,7 @@ function App() {
           <div className="safe-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/toolbox-boiler.jpg" 
-              alt="Gas Safe registered engineer {{AREA}}"
+              alt="Gas Safe registered engineer PLACEHOLDER_AREA"
               className="w-full h-full object-cover"
             />
           </div>
@@ -710,7 +720,7 @@ function App() {
               </ul>
               <div className="p-4 bg-navy/5 rounded-xl mb-6">
                 <p className="text-sm text-text-secondary">
-                  <span className="font-semibold text-text-primary">Gas Safe Reg No:</span> {{GAS_SAFE_NUMBER}} 
+                  <span className="font-semibold text-text-primary">Gas Safe Reg No:</span> PLACEHOLDER_GAS_SAFE 
                   <span className="text-text-secondary/60 ml-2">(placeholder)</span>
                 </p>
               </div>
@@ -776,7 +786,7 @@ function App() {
           <div className="boiler-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/boiler-engineer.jpg" 
-              alt="Boiler installation and repair {{AREA}}"
+              alt="Boiler installation and repair PLACEHOLDER_AREA"
               className="w-full h-full object-cover"
             />
           </div>
@@ -905,7 +915,7 @@ function App() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm text-text-secondary mb-1 block">Postcode *</label>
-                      <Input placeholder="{{POSTCODE}}" className="h-12 rounded-xl" required />
+                      <Input placeholder="PLACEHOLDER_POSTCODE" className="h-12 rounded-xl" required />
                     </div>
                     <div>
                       <label className="text-sm text-text-secondary mb-1 block">Service needed</label>
@@ -967,7 +977,7 @@ function App() {
                 </div>
                 <div>
                   <span className="text-text-primary font-semibold block">Sarah M.</span>
-                  <span className="text-text-secondary text-sm">{{AREA}}</span>
+                  <span className="text-text-secondary text-sm">PLACEHOLDER_AREA</span>
                 </div>
               </div>
             </div>
@@ -1047,7 +1057,7 @@ function App() {
                 <span className="text-white font-heading font-bold text-lg">{{BUSINESS_SHORT_NAME}}</span>
               </div>
               <p className="text-white/60 text-sm mb-6">
-                Fast, reliable plumbing & heating in {{AREA}} & {{POSTCODE}}. Gas Safe registered engineers.
+                Fast, reliable plumbing & heating in PLACEHOLDER_AREA & PLACEHOLDER_POSTCODE. Gas Safe registered engineers.
               </p>
               <div className="space-y-2">
                 <a href={`tel:${BUSINESS_INFO.phone}`} className="text-white/80 text-sm flex items-center gap-2 hover:text-amber transition-colors">
@@ -1095,10 +1105,10 @@ function App() {
           {/* Bottom Row */}
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/40 text-sm">
-              © 2026 {{AREA}} Emergency & General Plumbing Services. All rights reserved.
+              © 2026 PLACEHOLDER_AREA Emergency & General Plumbing Services. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-white/40 text-sm">Gas Safe Reg No: {{GAS_SAFE_NUMBER}}</span>
+              <span className="text-white/40 text-sm">Gas Safe Reg No: PLACEHOLDER_GAS_SAFE</span>
             </div>
           </div>
         </div>
@@ -1146,7 +1156,7 @@ function App() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-text-secondary mb-1 block">Postcode *</label>
-                <Input placeholder="{{POSTCODE}}" className="h-12 rounded-xl" required />
+                <Input placeholder="PLACEHOLDER_POSTCODE" className="h-12 rounded-xl" required />
               </div>
               <div>
                 <label className="text-sm text-text-secondary mb-1 block">Service needed</label>
