@@ -25,12 +25,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 gsap.registerPlugin(ScrollTrigger);
 
 const BUSINESS_INFO = {
-  name: "Tooting Emergency & General Plumbing Services",
-  phone: "07471 126604",
-  whatsapp: "07471 126604",
-  address: "38 Selkirk Rd, London SW17 0ES",
-  postcode: "SW17 0ES",
-  areas: ["Tooting", "Balham", "Streatham", "Wandsworth", "Clapham", "Colliers Wood", "Mitcham", "Wimbledon", "Earlsfield", "Battersea"]
+  name: "{{BUSINESS_NAME}}",
+  phone: "{{PHONE}}",
+  whatsapp: "{{WHATSAPP}}",
+  address: "{{FULL_ADDRESS}}",
+  postcode: "{{POSTCODE}}",
+  areas: {{AREAS_ARRAY}}
 };
 
 function App() {
@@ -304,7 +304,7 @@ function App() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <Droplets className="w-6 h-6 text-amber" />
-              <span className="text-white font-heading font-bold text-lg lg:text-xl">Tooting Plumbing</span>
+              <span className="text-white font-heading font-bold text-lg lg:text-xl">{{BUSINESS_SHORT_NAME}}</span>
             </div>
 
             {/* Desktop Nav */}
@@ -368,7 +368,7 @@ function App() {
         <div className="hero-image absolute left-0 top-0 w-full lg:w-[62vw] h-[50vh] lg:h-full">
           <img 
             src="/images/hero-plumber.jpg" 
-            alt="Professional plumber in Tooting SW17"
+            alt="Professional plumber in {{AREA}} {{POSTCODE}}"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-navy/90 lg:to-navy" />
@@ -387,7 +387,7 @@ function App() {
             </h1>
             
             <p className="hero-subtext text-white/80 text-base lg:text-lg mb-6 lg:mb-8 max-w-md">
-              Same-day service in Tooting, SW17 & surrounding areas. Gas Safe registered engineers.
+              Same-day service in {{AREA}}, {{POSTCODE}} & surrounding areas. Gas Safe registered engineers.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
@@ -539,7 +539,7 @@ function App() {
           <div className="help-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/engineer-van.jpg" 
-              alt="Local plumber at work in Tooting"
+              alt="Local plumber at work in {{AREA}}"
               className="w-full h-full object-cover"
             />
           </div>
@@ -553,7 +553,7 @@ function App() {
               </h2>
               <p className="text-text-secondary text-base lg:text-lg mb-6">
                 We're local engineers who turn up on time, explain the work, and leave your home tidy. 
-                Based in Tooting SW17, we serve all of South London with pride.
+                Based in {{AREA}} {{POSTCODE}}, we serve all of {{REGION}} with pride.
               </p>
               <p className="text-text-secondary text-base lg:text-lg mb-8">
                 With years of experience and hundreds of satisfied customers, we've built our reputation 
@@ -596,7 +596,7 @@ function App() {
                 </div>
                 <p className="text-white/70 text-base lg:text-lg max-w-xl">
                   If it's urgent, we'll prioritise getting to you—fast, tidy, and professional. 
-                  Same-day emergency service available across Tooting and South London.
+                  Same-day emergency service available across {{AREA}} and {{REGION}}.
                 </p>
               </div>
               <a href={`tel:${BUSINESS_INFO.phone}`} className="btn-primary whitespace-nowrap">
@@ -632,7 +632,7 @@ function App() {
           <div className="reliable-image relative w-full lg:w-[48vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/under-sink.jpg" 
-              alt="Quality plumbing work in South London"
+              alt="Quality plumbing work in {{REGION}}"
               className="w-full h-full object-cover"
             />
           </div>
@@ -678,7 +678,7 @@ function App() {
           <div className="safe-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/toolbox-boiler.jpg" 
-              alt="Gas Safe registered engineer Tooting"
+              alt="Gas Safe registered engineer {{AREA}}"
               className="w-full h-full object-cover"
             />
           </div>
@@ -710,7 +710,7 @@ function App() {
               </ul>
               <div className="p-4 bg-navy/5 rounded-xl mb-6">
                 <p className="text-sm text-text-secondary">
-                  <span className="font-semibold text-text-primary">Gas Safe Reg No:</span> 123456 
+                  <span className="font-semibold text-text-primary">Gas Safe Reg No:</span> {{GAS_SAFE_NUMBER}} 
                   <span className="text-text-secondary/60 ml-2">(placeholder)</span>
                 </p>
               </div>
@@ -730,7 +730,7 @@ function App() {
           <div className="plumbing-image relative w-full lg:w-[48vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/plumbing-wrench.jpg" 
-              alt="Emergency plumber SW17"
+              alt="{{EMERGENCY_IMAGE_ALT}}"
               className="w-full h-full object-cover"
             />
           </div>
@@ -776,7 +776,7 @@ function App() {
           <div className="boiler-image relative w-full lg:w-[55vw] h-[50vh] lg:h-screen">
             <img 
               src="/images/boiler-engineer.jpg" 
-              alt="Boiler installation and repair Tooting"
+              alt="Boiler installation and repair {{AREA}}"
               className="w-full h-full object-cover"
             />
           </div>
@@ -905,7 +905,7 @@ function App() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm text-text-secondary mb-1 block">Postcode *</label>
-                      <Input placeholder="SW17 0ES" className="h-12 rounded-xl" required />
+                      <Input placeholder="{{POSTCODE}}" className="h-12 rounded-xl" required />
                     </div>
                     <div>
                       <label className="text-sm text-text-secondary mb-1 block">Service needed</label>
@@ -967,7 +967,7 @@ function App() {
                 </div>
                 <div>
                   <span className="text-text-primary font-semibold block">Sarah M.</span>
-                  <span className="text-text-secondary text-sm">Tooting</span>
+                  <span className="text-text-secondary text-sm">{{AREA}}</span>
                 </div>
               </div>
             </div>
@@ -1044,10 +1044,10 @@ function App() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <Droplets className="w-6 h-6 text-amber" />
-                <span className="text-white font-heading font-bold text-lg">Tooting Plumbing</span>
+                <span className="text-white font-heading font-bold text-lg">{{BUSINESS_SHORT_NAME}}</span>
               </div>
               <p className="text-white/60 text-sm mb-6">
-                Fast, reliable plumbing & heating in Tooting & SW17. Gas Safe registered engineers.
+                Fast, reliable plumbing & heating in {{AREA}} & {{POSTCODE}}. Gas Safe registered engineers.
               </p>
               <div className="space-y-2">
                 <a href={`tel:${BUSINESS_INFO.phone}`} className="text-white/80 text-sm flex items-center gap-2 hover:text-amber transition-colors">
@@ -1095,10 +1095,10 @@ function App() {
           {/* Bottom Row */}
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/40 text-sm">
-              © 2026 Tooting Emergency & General Plumbing Services. All rights reserved.
+              © 2026 {{AREA}} Emergency & General Plumbing Services. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-white/40 text-sm">Gas Safe Reg No: 123456</span>
+              <span className="text-white/40 text-sm">Gas Safe Reg No: {{GAS_SAFE_NUMBER}}</span>
             </div>
           </div>
         </div>
@@ -1146,7 +1146,7 @@ function App() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm text-text-secondary mb-1 block">Postcode *</label>
-                <Input placeholder="SW17 0ES" className="h-12 rounded-xl" required />
+                <Input placeholder="{{POSTCODE}}" className="h-12 rounded-xl" required />
               </div>
               <div>
                 <label className="text-sm text-text-secondary mb-1 block">Service needed</label>

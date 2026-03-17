@@ -4,129 +4,62 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emergency Plumber & Boiler Repairs Tooting SW17 | Same-Day Service</title>
-    <meta name="description" content="Fast, reliable plumbing & heating services in Tooting SW17. Gas Safe registered engineers. Same-day emergency callouts. Boiler repairs, servicing & installations. Call 07471 126604." />
-    <meta name="keywords" content="plumber Tooting, emergency plumber SW17, boiler repair Tooting, gas engineer Tooting, plumbing services South London, landlord gas safety certificate CP12" />
-    <meta name="author" content="Tooting Emergency & General Plumbing Services" />
+    <title>{{META_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+    <meta name="keywords" content="{{META_KEYWORDS}}" />
+    <meta name="author" content="{{BUSINESS_NAME}}" />
     <meta name="robots" content="index, follow" />
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Emergency Plumber & Boiler Repairs Tooting SW17" />
-    <meta property="og:description" content="Fast, reliable plumbing & heating services in Tooting SW17. Gas Safe registered. Same-day service. Call 07471 126604." />
+    <meta property="og:title" content="{{OG_TITLE}}" />
+    <meta property="og:description" content="{{OG_DESCRIPTION}}" />
     <meta property="og:type" content="business.business" />
     <meta property="og:locale" content="en_GB" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Emergency Plumber & Boiler Repairs Tooting SW17" />
-    <meta name="twitter:description" content="Fast, reliable plumbing & heating services in Tooting SW17. Gas Safe registered. Same-day service." />
+    <meta name="twitter:title" content="{{TWITTER_TITLE}}" />
+    <meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}" />
     
     <!-- Canonical -->
-    <link rel="canonical" href="https://tooting-plumbing.co.uk" />
+    <link rel="canonical" href="{{WEBSITE_URL}}" />
     
     <!-- Geo Tags -->
-    <meta name="geo.region" content="GB-LND" />
-    <meta name="geo.placename" content="Tooting" />
-    <meta name="geo.position" content="51.4275;-0.1685" />
-    <meta name="ICBM" content="51.4275, -0.1685" />
+    <meta name="geo.region" content="{{GEO_REGION}}" />
+    <meta name="geo.placename" content="{{AREA}}" />
+    <meta name="geo.position" content="{{GEO_LAT}};{{GEO_LNG}}" />
+    <meta name="ICBM" content="{{GEO_LAT}}, {{GEO_LNG}}" />
     
     <!-- Schema.org LocalBusiness JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Plumber",
-      "name": "Tooting Emergency & General Plumbing Services",
-      "image": "https://tooting-plumbing.co.uk/images/hero-plumber.jpg",
-      "telephone": "+447471126604",
-      "email": "",
+      "name": "{{BUSINESS_NAME}}",
+      "image": "{{BUSINESS_IMAGE}}",
+      "telephone": "{{PHONE}}",
+      "email": "{{EMAIL}}",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "38 Selkirk Rd",
-        "addressLocality": "Tooting",
-        "addressRegion": "London",
-        "postalCode": "SW17 0ES",
-        "addressCountry": "GB"
+        "streetAddress": "{{STREET_ADDRESS}}",
+        "addressLocality": "{{AREA}}",
+        "addressRegion": "{{REGION}}",
+        "postalCode": "{{POSTCODE}}",
+        "addressCountry": "{{COUNTRY}}"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 51.4275,
-        "longitude": -0.1685
+        "latitude": {{GEO_LAT}},
+        "longitude": {{GEO_LNG}}
       },
-      "url": "https://tooting-plumbing.co.uk",
-      "priceRange": "££",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Saturday"],
-          "opens": "09:00",
-          "closes": "16:00"
-        }
-      ],
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Tooting"
-        },
-        {
-          "@type": "City",
-          "name": "Balham"
-        },
-        {
-          "@type": "City",
-          "name": "Streatham"
-        },
-        {
-          "@type": "City",
-          "name": "Wandsworth"
-        },
-        {
-          "@type": "City",
-          "name": "Clapham"
-        },
-        {
-          "@type": "City",
-          "name": "Wimbledon"
-        }
-      ],
+      "url": "{{WEBSITE_URL}}",
+      "priceRange": "{{PRICE_RANGE}}",
+      "openingHoursSpecification": {{OPENING_HOURS}},
+      "areaServed": {{AREAS_SERVED}},
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Plumbing Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Emergency Plumbing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Boiler Repairs"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Boiler Servicing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Landlord Gas Safety Certificates"
-            }
-          }
-        ]
+        "itemListElement": {{SERVICES}}
       }
     }
     </script>
