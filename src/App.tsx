@@ -27,7 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 // BUSINESS INFO - Replace these values when creating a new site
 const BUSINESS_INFO = {
   name: "PLACEHOLDER_BUSINESS_NAME",
-  shortName: "PLACEHOLDER_SHORT_NAME",
+  shortName: "PLACEHOLDER_BUSINESS_NAME",
   phone: "PLACEHOLDER_PHONE",
   whatsapp: "PLACEHOLDER_WHATSAPP",
   email: "PLACEHOLDER_EMAIL",
@@ -314,7 +314,7 @@ function App() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <Droplets className="w-6 h-6 text-amber" />
-              <span className="text-white font-heading font-bold text-lg lg:text-xl">PLACEHOLDER_SHORT_NAME</span>
+              <span className="text-white font-heading font-bold text-lg lg:text-xl">PLACEHOLDER_BUSINESS_NAME</span>
             </div>
 
             {/* Desktop Nav */}
@@ -1054,7 +1054,7 @@ function App() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <Droplets className="w-6 h-6 text-amber" />
-                <span className="text-white font-heading font-bold text-lg">PLACEHOLDER_SHORT_NAME</span>
+                <span className="text-white font-heading font-bold text-lg">PLACEHOLDER_BUSINESS_NAME</span>
               </div>
               <p className="text-white/60 text-sm mb-6">
                 Fast, reliable plumbing & heating in PLACEHOLDER_AREA & PLACEHOLDER_POSTCODE. Gas Safe registered engineers.
